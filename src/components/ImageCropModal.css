@@ -1,0 +1,56 @@
+/* ImageCropModal.css */
+/* Remove the rectangular selection box */
+.ReactCrop__crop-selection {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 50% !important;
+  }
+  
+  /* Style the circular overlay */
+  .ReactCrop__crop-selection::before {
+    border-radius: 50% !important;
+    border: 2px solid white !important; /* Add a white border to the circle */
+    background: none !important;
+  }
+
+  .ReactCrop__crop-selection::after {
+    border-radius: 50% !important;
+    border: 2px solid white !important; /* Add a white border to the circle */
+    background: none !important;
+  }
+  
+  /* Position drag handles on the circle's edge */
+  .ReactCrop__drag-handle {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+  }
+  
+  /* Adjust specific handle positions to be on the circle */
+  .ReactCrop__drag-handle.ord-nw {
+    transform: translate(50%, 50%);
+  }
+  .ReactCrop__drag-handle.ord-ne {
+    transform: translate(-50%, 50%);
+  }
+  .ReactCrop__drag-handle.ord-se {
+    transform: translate(-50%, -50%);
+  }
+  .ReactCrop__drag-handle.ord-sw {
+    transform: translate(50%, -50%);
+  }
+  
+  /* Hide the side handles, keeping only corners */
+  .ReactCrop__drag-handle.ord-n,
+  .ReactCrop__drag-handle.ord-e,
+  .ReactCrop__drag-handle.ord-s,
+  .ReactCrop__drag-handle.ord-w {
+    display: none !important;
+  }
+  
+  /* Style the outside area */
+  .ReactCrop {
+    background: rgba(0, 0, 0, 0);
+  }
